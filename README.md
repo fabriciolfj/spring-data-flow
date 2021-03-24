@@ -2,7 +2,7 @@
 - Exemplo de aplicações personalizadas, integrando com spring data flow.
 
 
-### Configuração
+### Configuração (branch rabbit)
 - Execute o install ssh que encontra-se no diretório workspace-rabbit-mysql-monitoring. obs: utilizei o multipass para montagem do ambiente local kubernetes
 - Crie imagens das aplicações movie-sink, movie-processor e movie-source. mvn clean install spring-boot:boot-image
 - Suba no docker hub. docker push id/nome da imagem:versao
