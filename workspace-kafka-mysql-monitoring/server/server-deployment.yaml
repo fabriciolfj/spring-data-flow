@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: scdf-server
-        image: springcloud/spring-cloud-dataflow-server:2.6.0
+        image: springcloud/spring-cloud-dataflow-server
         imagePullPolicy: Always
         volumeMounts:
           - name: database
