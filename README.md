@@ -47,4 +47,4 @@ spring.cloud.dataflow.skipper.platformName=default
         }
     ]
 }
-``
+```
