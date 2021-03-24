@@ -28,7 +28,7 @@ public class MovieController {
 
         log.debug("Sending: {}", movieRequest);
         assert  streamBridge != null;
-        streamBridge.send("movie-out-0", movieRequest);
+        movieRequest.getMovies().forEach(movie -> streamBridge.send("movie-out-0", movie));
 
         return ResponseEntity
                 .accepted()

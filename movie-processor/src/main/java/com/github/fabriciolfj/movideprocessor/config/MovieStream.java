@@ -43,7 +43,7 @@ public class MovieStream {
         return movieFlux -> movieFlux.map(
                 movie -> {
                     try {
-
+                        log.info("Movie received: {}", movie);
                         getRequest.setURI(new URI(movieProperties.getApiServer().replace("ID", movie.getId())));
                         HttpEntity entity = httpclient.execute(getRequest).getEntity();
                         movie.setImdb(objectMapper.readValue(EntityUtils.toString(entity, StandardCharsets.UTF_8), MovieImdb.class));
