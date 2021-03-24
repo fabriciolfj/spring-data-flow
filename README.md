@@ -23,3 +23,28 @@ app.movie-sink.server.port=8080
 app.movie-source.spring.cloud.stream.bindings.output.destination=movie
 spring.cloud.dataflow.skipper.platformName=default
 ```
+- Aponte para o pod source, afim de testar o fluxo: kubectl port-forward pod/movie-movie-source-v8-685684d9f7-gmsz2 9090:8080
+- Payload sugerido: psot localhost:9090/v1/api/movies
+```
+{
+    "action": "create",
+    "movies": [
+        {
+            "id": "tt0133093",
+            "title": "The Matrix",
+            "actor": "Keanu Reeves",
+            "year": 1999,
+            "genre": "fiction",
+            "stars": 5
+        },
+        {
+            "id": "tt0209144",
+            "title": "Memento",
+            "actor": "Guy Pearce",
+            "year": 2000,
+            "genre": "drama",
+            "stars": 4
+        }
+    ]
+}
+``
