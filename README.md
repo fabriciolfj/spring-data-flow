@@ -24,7 +24,7 @@ app.movie-source.spring.cloud.stream.bindings.output.destination=movie
 spring.cloud.dataflow.skipper.platformName=default
 ```
 - Aponte para o pod source, afim de testar o fluxo: kubectl port-forward pod/movie-movie-source-v8-685684d9f7-gmsz2 9090:8080
-- Payload sugerido: psot localhost:9090/v1/api/movies
+- Payload sugerido: post localhost:9090/v1/api/movies
 ```
 {
     "action": "create",
